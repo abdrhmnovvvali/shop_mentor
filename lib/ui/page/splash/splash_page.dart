@@ -5,10 +5,6 @@ class SplashPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title:Text("Splash page"),
-      ),
-    );
+    return Scaffold(appBar: AppBar(title: const Text("Splash page")));
   }
 }
