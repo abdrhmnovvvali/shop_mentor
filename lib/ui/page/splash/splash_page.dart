@@ -77,5 +77,6 @@ class SplashPage extends StatelessWidget {
         ),
       ),
     );
+
   }
 }
