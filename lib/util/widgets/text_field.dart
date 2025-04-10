@@ -21,6 +21,7 @@ class TextFieldWidget extends StatelessWidget {
             style: GoogleFonts.nunito(
               fontSize: 14.sp,
               fontWeight: FontWeight.w600,
+              color: Colors.white
             ),
           ),
         ),

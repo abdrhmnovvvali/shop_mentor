@@ -4,7 +4,6 @@ class AppColors {
   AppColors._();
 
   static const Color backgroundColor = Color.fromRGBO(28, 28, 37, 1);
-
   static const Color formFillColor = Color.fromRGBO(250, 250, 255, 1);
 
   // COLOR KIT
