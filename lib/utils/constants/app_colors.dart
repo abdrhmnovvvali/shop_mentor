@@ -8,6 +8,7 @@ class AppColors {
 
   // COLOR KIT
   static const Color color1 = Color(0xFFcde9d4);
+
   static const Color color2 = Color(0xFFd2ebd8);
   static const Color color3 = Color(0xFFd7eddd);
   static const Color color4 = Color(0xFFdcf0e1);
@@ -17,4 +18,17 @@ class AppColors {
   static const Color color8 = Color(0xFFf0f8f2);
   static const Color color9 = Color(0xFFf5fbf6);
   static const Color color10 = Color(0xFFfafdfb);
+static const Color secondaryColor = Color.fromRGBO(28, 28, 37, 1);
+  static const Color coldLips = Color.fromRGBO(155, 153, 245, 1);
+  static const Color primaryColor = Color.fromRGBO(255, 255, 255, 1);
+  static const Color jadePalace = Color.fromRGBO(205, 233, 212, 1);
+  static const Color textColor = Color.fromRGBO(6, 16, 15, 1);
+
+
+
+
+
+
+
+  static const Color primary=jadePalace;
 }

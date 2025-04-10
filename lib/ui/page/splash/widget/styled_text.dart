@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:shop_mentor/utils/constants/appColors/app_colors.dart';
-import 'package:shop_mentor/utils/constants/appText/app_text.dart';
+import 'package:shop_mentor/utils/constants/app_colors.dart';
+import 'package:shop_mentor/utils/constants/app_txt.dart';
 
 class StyledTextSpan extends StatelessWidget {
   const StyledTextSpan({super.key});
@@ -49,14 +50,13 @@ class StyledTextSpan extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox.fromSize(size: const Size(0, 20)
-        ,),
+       50.verticalSpace,
         Align(
           alignment: Alignment.centerLeft,
           child: SizedBox(
             width: 227,
             child: Text(
-              AppText.splashSubTitle,
+              AppTxt.splashSubTitle,
               textAlign: TextAlign.start,
               softWrap: true,
               style: GoogleFonts.inter(
