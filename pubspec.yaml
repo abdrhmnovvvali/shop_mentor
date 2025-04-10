@@ -37,7 +37,6 @@ dependencies:
   google_fonts: ^6.2.1
 
   lucide_icons: ^0.257.0
-  google_fonts: ^6.2.1
   flutter_screenutil: ^5.9.3
 
 dev_dependencies:
