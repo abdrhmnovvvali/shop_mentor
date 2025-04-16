@@ -25,7 +25,7 @@ class SplashPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const StyledTextSpan(),
-                const SizedBox(height:100),
+                const SizedBox(height: 100),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -34,7 +34,7 @@ class SplashPage extends StatelessWidget {
                       onPressed: () => Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => SplashPage(),
+                          builder: (context) => const SplashPage(),
                         ),
                       ),
                     ),
@@ -80,6 +80,5 @@ class SplashPage extends StatelessWidget {
         ),
       ),
     );
-
   }
 }

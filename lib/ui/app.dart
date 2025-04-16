@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:shop_mentor/ui/page/splash/splash_page.dart';
+import 'package:shop_mentor/ui/page/sign_up/sign_up_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -14,9 +14,8 @@ class MyApp extends StatelessWidget {
         theme: ThemeData.dark(),
         darkTheme: ThemeData.dark(),
         debugShowCheckedModeBanner: false,
-        home: const SplashPage(),
+        home: const SignUpPage(),
       ),
-
     );
   }
 }
