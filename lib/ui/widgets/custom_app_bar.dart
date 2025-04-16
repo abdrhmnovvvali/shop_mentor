@@ -21,11 +21,12 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 40.w),
       child: AppBar(
+        backgroundColor: AppColors.backgroundColor,
         centerTitle: true,
         leading: leadIcon == null
             ? null
             : GestureDetector(
-                onTap: onLeadingPressed,
+                onTap: () => Navigator.pop(context),
                 child: Center(
                   child: SvgPicture.asset(
                     leadIcon!,

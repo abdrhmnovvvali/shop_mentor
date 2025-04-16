@@ -11,6 +11,13 @@ class AppTxt {
   static const String signUpRichText2 = "Terms of Service";
   static const String signUpBottomText = "Log in";
 
+  // SIGN IN PAGE
+  static const String signInTitle = "Sign in";
+  static const String signInEmail = "Email";
+  static const String signInPassword = "Password";
+  static const String signInBottomText = "Sign up";
+  static const String forgotPassword = "Forgot Password?";
+
   // GENERAL
   static const String hintText1 = "Geoffrey Liam";
   static const String hintText2 = "+60 12 234 567";

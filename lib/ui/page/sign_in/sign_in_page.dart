@@ -6,17 +6,17 @@ import 'package:shop_mentor/ui/widgets/custom_app_bar.dart';
 import 'package:shop_mentor/utils/constants/app_colors.dart';
 import 'package:shop_mentor/utils/constants/app_txt.dart';
 import 'package:shop_mentor/utils/widgets/text_field.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
-class SignUpPage extends StatelessWidget {
-  const SignUpPage({super.key});
+class SignInPage extends StatelessWidget {
+  const SignInPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.backgroundColor,
       appBar: const CustomAppBar(
-        title: AppTxt.signUpTitle,
+        title: AppTxt.signInTitle,
         leadIcon: AppTxt.arrowLeft,
       ),
       body: Padding(
@@ -26,20 +26,6 @@ class SignUpPage extends StatelessWidget {
             children: [
               const CustomTextFormField(
                   hintText: AppTxt.hintText1,
-                  title: AppTxt.signUpUsername,
-                  obscureText: false),
-              SizedBox(
-                height: 20.h,
-              ),
-              const CustomTextFormField(
-                  hintText: AppTxt.hintText2,
-                  title: AppTxt.signUpPhoneNumber,
-                  obscureText: false),
-              SizedBox(
-                height: 20.h,
-              ),
-              const CustomTextFormField(
-                  hintText: AppTxt.hintText3,
                   title: AppTxt.signUpEmail,
                   obscureText: false),
               SizedBox(
@@ -54,31 +40,24 @@ class SignUpPage extends StatelessWidget {
                 height: 30.h,
               ),
 
-              // Rich Text
+              // Forgot Password
+
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 94.5.w),
-                child: RichText(
+                padding: EdgeInsets.symmetric(horizontal: 117.5.w),
+                child: Text(
+                  AppTxt.forgotPassword,
                   textAlign: TextAlign.center,
-                  text: TextSpan(children: [
-                    TextSpan(
-                        text: AppTxt.signUpRichText1,
-                        style: TextStyle(
-                            fontFamily: "Nunito",
-                            fontWeight: FontWeight.w200,
-                            fontSize: 12.sp)),
-                    TextSpan(
-                        text: AppTxt.signUpRichText2,
-                        style: TextStyle(
-                            fontFamily: "Nunito",
-                            fontWeight: FontWeight.w600,
-                            fontSize: 14.sp))
-                  ]),
+                  style: TextStyle(
+                    fontFamily: "Nunito",
+                    fontWeight: FontWeight.w600,
+                    fontSize: 14.sp,
+                  ),
                 ),
               ),
 
               // Bottom Text
               SizedBox(
-                height: 181.h,
+                height: 396.h,
               ),
 
               Row(
@@ -87,11 +66,11 @@ class SignUpPage extends StatelessWidget {
                 children: [
                   TextButton(
                     onPressed: () {
-                      // Navigation to the SignInPage
+                      // Navigation to the SignUpPage
                     },
                     child: Center(
                       child: Text(
-                        AppTxt.signUpBottomText,
+                        AppTxt.signInBottomText,
                         style: TextStyle(
                             fontFamily: "Nunito",
                             fontWeight: FontWeight.w600,

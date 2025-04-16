@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shop_mentor/ui/page/sign_in/sign_in_page.dart';
+import 'package:shop_mentor/ui/page/sign_up/sign_up_page.dart';
 
 import 'package:shop_mentor/ui/page/splash/widget/styled_text.dart';
 import 'package:shop_mentor/ui/widgets/app_button.dart';
@@ -34,7 +36,7 @@ class SplashPage extends StatelessWidget {
                       onPressed: () => Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const SplashPage(),
+                          builder: (context) => const SignUpPage(),
                         ),
                       ),
                     ),
@@ -44,7 +46,7 @@ class SplashPage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const SplashPage(),
+                            builder: (context) => const SignInPage(),
                           ),
                         );
                       },
