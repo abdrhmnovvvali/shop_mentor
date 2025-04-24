@@ -7,11 +7,12 @@ class CustomTextFormField extends StatelessWidget {
       {super.key,
       required this.hintText,
       required this.title,
-      required this.obscureText});
+      required this.obscureText, this.controller});
 
   final String hintText;
   final String title;
   final bool obscureText;
+  final TextEditingController? controller;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +28,8 @@ class CustomTextFormField extends StatelessWidget {
               )),
         ),
         SizedBox(height: 15.h),
-        TextField(
+        TextFormField(
+       controller:controller ,
           obscureText: obscureText,
           style: TextStyle(
               fontFamily: "Nunito",

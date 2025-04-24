@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shop_mentor/ui/widgets/custom_app_bar.dart';
 import 'package:shop_mentor/utils/constants/app_colors.dart';
 import 'package:shop_mentor/utils/constants/app_txt.dart';
-import 'package:shop_mentor/utils/widgets/text_field.dart';
+import 'package:shop_mentor/ui/widgets/custom_text_form_field.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class SignInPage extends StatelessWidget {

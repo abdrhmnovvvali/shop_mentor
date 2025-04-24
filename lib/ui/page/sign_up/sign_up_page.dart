@@ -1,11 +1,14 @@
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shop_mentor/cubits/signUp/sign_up_cubit.dart';
+import 'package:shop_mentor/ui/page/sign_in/sign_in_page.dart';
 import 'package:shop_mentor/ui/widgets/custom_app_bar.dart';
+import 'package:shop_mentor/ui/widgets/custom_text_form_field.dart';
 import 'package:shop_mentor/utils/constants/app_colors.dart';
 import 'package:shop_mentor/utils/constants/app_txt.dart';
-import 'package:shop_mentor/utils/widgets/text_field.dart';
 import 'package:flutter_svg/svg.dart';
 
 class SignUpPage extends StatelessWidget {
@@ -13,6 +16,7 @@ class SignUpPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final cubit = context.read<SignUpCubit>();
     return Scaffold(
       backgroundColor: AppColors.backgroundColor,
       appBar: const CustomAppBar(
@@ -24,31 +28,43 @@ class SignUpPage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              const CustomTextFormField(
+               CustomTextFormField(
+                controller: cubit.usernameController,
+
                   hintText: AppTxt.hintText1,
                   title: AppTxt.signUpUsername,
                   obscureText: false),
               SizedBox(
                 height: 20.h,
               ),
-              const CustomTextFormField(
+               CustomTextFormField(
+                  controller: cubit.phoneController,
+
                   hintText: AppTxt.hintText2,
                   title: AppTxt.signUpPhoneNumber,
                   obscureText: false),
               SizedBox(
                 height: 20.h,
               ),
-              const CustomTextFormField(
+               CustomTextFormField(
+                  controller: cubit.emailController,
                   hintText: AppTxt.hintText3,
                   title: AppTxt.signUpEmail,
                   obscureText: false),
               SizedBox(
                 height: 20.h,
               ),
-              const CustomTextFormField(
+               CustomTextFormField(
+                  controller: cubit.passwordController,
                   hintText: AppTxt.signUpPassword,
                   title: AppTxt.signUpPassword,
                   obscureText: true),
+              20.verticalSpace,
+                CustomTextFormField(
+                  controller: cubit.confirmPasswordController,
+                  hintText: AppTxt.signUpPassword,
+                  title:"Confirm Password",
+                  obscureText: true),    
 
               SizedBox(
                 height: 30.h,
@@ -59,7 +75,8 @@ class SignUpPage extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 94.5.w),
                 child: RichText(
                   textAlign: TextAlign.center,
-                  text: TextSpan(children: [
+                  text: TextSpan(
+                    children: [
                     TextSpan(
                         text: AppTxt.signUpRichText1,
                         style: TextStyle(
@@ -85,9 +102,10 @@ class SignUpPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
+                  
                   TextButton(
                     onPressed: () {
-                      // Navigation to the SignInPage
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const SignInPage()));
                     },
                     child: Center(
                       child: Text(
@@ -108,7 +126,9 @@ class SignUpPage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
           backgroundColor: AppColors.primary,
-          onPressed: () {},
+          onPressed: () {
+            cubit.handleSignUp(context);
+          },
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(60.r),
           ),

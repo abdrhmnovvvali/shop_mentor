@@ -18,12 +18,12 @@ class AppTxt {
   static const String signInBottomText = "Sign up";
   static const String forgotPassword = "Forgot Password?";
 
+
   // GENERAL
   static const String hintText1 = "Geoffrey Liam";
   static const String hintText2 = "+60 12 234 567";
   static const String hintText3 = "Geoffreyliam@email.com";
-  static const String splashSubTitle =
-      'Use the voucher provided to buy a shirt, because there are lots of free vouchers here!';
+  static const String splashSubTitle ='Use the voucher provided to buy a shirt, because there are lots of free vouchers here!';
   static const String signUpButton = 'Sign up';
   static const String signInButton = 'Sign in';
 

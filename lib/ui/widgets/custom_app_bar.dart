@@ -21,6 +21,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 40.w),
       child: AppBar(
+        actions: [],
         backgroundColor: AppColors.backgroundColor,
         centerTitle: true,
         leading: leadIcon == null
